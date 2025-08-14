@@ -1,0 +1,184 @@
+{
+  "canvas": {
+    "width": 256,
+    "height": 240,
+    "scale": 3
+  },
+  "meta": {
+    "game_title": "BOB LINHARD'S PUNCH-OUT!!",
+    "frus_title": "FRUS: National Security Policy, 1985\u20131988 (Vol. XLIV, Pt. 1)",
+    "frus_link": "https://history.state.gov/historicaldocuments/frus1981-88v44p1",
+    "frus_cover": "assets/frus_cover.png",
+    "ticker": [
+      "New FRUS volume: National Security Policy, 1985\u20131988.",
+      "Primary docs on SDI, START, INF, NSP \u2014 free online.",
+      "Includes interagency debates, memcons, NSDDs.",
+      "Read it: history.state.gov/historicaldocuments/frus1981-88v44p1"
+    ]
+  },
+  "style": {
+    "ring_mat": "#8B3A2E",
+    "ring_mat_line": "#6E2E25",
+    "banner_bg": "#3A1E1A",
+    "banner_fg": "#FFD34D"
+  },
+  "player": {
+    "image": "assets/player_linhard.png",
+    "grid": {
+      "cols": 4,
+      "rows": 4
+    },
+    "animations": {
+      "idle": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "jab_left": [
+        4,
+        5,
+        6
+      ],
+      "jab_right": [
+        8,
+        9,
+        10
+      ],
+      "dodge_left": [
+        3,
+        7
+      ],
+      "dodge_right": [
+        11,
+        15
+      ],
+      "star": [
+        12,
+        13,
+        14
+      ],
+      "victory": [
+        15
+      ]
+    },
+    "frame_ms": 140
+  },
+  "opponents": [
+    {
+      "name": "George Shultz",
+      "image": "assets/opponent_shultz_sheet.png",
+      "grid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "animations": {
+        "idle": [
+          0,
+          1
+        ],
+        "tell": [
+          2
+        ],
+        "punch": [
+          3,
+          4
+        ],
+        "hit": [
+          5
+        ]
+      },
+      "ai": {
+        "tell_ms": 550,
+        "active_ms": 120,
+        "recovery_ms": 350,
+        "counter_window_ms": 180
+      }
+    },
+    {
+      "name": "Caspar Weinberger",
+      "image": "assets/opponent_weinberger_sheet.png",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "animations": {
+        "idle": [
+          0,
+          1
+        ],
+        "tell": [
+          2,
+          3
+        ],
+        "punch": [
+          4,
+          5
+        ],
+        "hit": [
+          6
+        ],
+        "fall": [
+          7,
+          8
+        ]
+      },
+      "ai": {
+        "tell_ms": 500,
+        "active_ms": 120,
+        "recovery_ms": 380,
+        "counter_window_ms": 170
+      }
+    },
+    {
+      "name": "Mikhail Gorbachev",
+      "image": "assets/opponent_gorbachev_sheet.png",
+      "grid": {
+        "cols": 3,
+        "rows": 4
+      },
+      "animations": {
+        "idle": [
+          0,
+          1
+        ],
+        "tell": [
+          2,
+          3
+        ],
+        "punch": [
+          4,
+          5
+        ],
+        "hit": [
+          6
+        ],
+        "fall": [
+          7,
+          8,
+          9
+        ]
+      },
+      "ai": {
+        "tell_ms": 460,
+        "active_ms": 120,
+        "recovery_ms": 360,
+        "counter_window_ms": 160
+      }
+    }
+  ],
+  "hud": {
+    "hearts_start": 20,
+    "winded_ms": 2000
+  },
+  "tuning": {
+    "player": {
+      "jab_startup_ms": 100,
+      "jab_active_ms": 100,
+      "jab_recovery_ms": 320,
+      "dodge_invuln_ms": 220
+    },
+    "opponent_damage": 8,
+    "player_damage": 10
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Bob Linhard's Punch-Out!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    html, body { background:#0c0c0f; color:#eee; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    #wrap { display:flex; flex-direction:column; align-items:center; gap:12px; padding:16px; }
+    h1 { margin: 6px 0 0; letter-spacing: 1px; text-shadow: 0 2px 0 #000; }
+    canvas { image-rendering: pixelated; image-rendering: crisp-edges; border:4px solid #ffd34d; background:#000; }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:center; }
+    kbd { background:#222; padding:2px 6px; border-radius:4px; color:#0f0; }
+    .hud { font-weight:700; }
+    button, .cta { background:#ffd34d; color:#111; border:0; padding:8px 14px; font-weight:800; border-radius:8px; cursor:pointer; text-decoration:none; }
+    button:active { transform: translateY(1px); }
+    .linkbar { display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; }
+    .linkbar a { color:#7df; text-decoration:underline; }
+    .small { font-size:12px; opacity:.9; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>BOB LINHARD'S PUNCH-OUT!!</h1>
+    <div class="row">
+      <div>Controls: <kbd>A</kbd>/<kbd>S</kbd> punch, <kbd>←</kbd>/<kbd>→</kbd> dodge, <kbd>↓</kbd> duck, <kbd>Enter</kbd> Start/Star.</div>
+      <button id="nextBtn">Next Opponent</button>
+      <a class="cta" id="frusBtn" href="https://history.state.gov/historicaldocuments/frus1981-88v44p1" target="_blank" rel="noopener">Open the FRUS Volume</a>
+    </div>
+    <canvas id="game" width="256" height="240"></canvas>
+    <div class="linkbar">
+      <span>Link to the volume:</span>
+      <a id="frusLink" href="https://history.state.gov/historicaldocuments/frus1981-88v44p1" target="_blank" rel="noopener">https://history.state.gov/historicaldocuments/frus1981-88v44p1</a>
+      <button id="copyBtn">Copy Link</button>
+    </div>
+    <div class="hud" id="hud"></div>
+    <div class="small">Tip: Press <kbd>Enter</kbd> on the title screen to start.</div>
+  </div>
+  <script type="module" src="./game.js"></script>
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn?.addEventListener('click', async ()=>{
+      try {
+        await navigator.clipboard.writeText('https://history.state.gov/historicaldocuments/frus1981-88v44p1');
+        copyBtn.textContent = 'Copied!';
+        setTimeout(()=>copyBtn.textContent='Copy Link', 1500);
+      } catch (e) { alert('Copy failed'); }
+    });
+  </script>
+</body>
+</html>
