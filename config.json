@@ -23,7 +23,7 @@
     "banner_fg": "#FFD34D"
   },
   "player": {
-    "image": "assets/player_linhard.png",
+    "image": "player_linhard.png",
     "grid": {
       "cols": 4,
       "rows": 4
@@ -67,7 +67,7 @@
   "opponents": [
     {
       "name": "George Shultz",
-      "image": "assets/opponent_shultz_sheet.png",
+      "image": "opponent_shultz_sheet.png",
       "grid": {
         "cols": 3,
         "rows": 2
