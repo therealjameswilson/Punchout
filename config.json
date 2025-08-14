@@ -8,7 +8,7 @@
     "game_title": "BOB LINHARD'S PUNCH-OUT!!",
     "frus_title": "FRUS: National Security Policy, 1985\u20131988 (Vol. XLIV, Pt. 1)",
     "frus_link": "https://history.state.gov/historicaldocuments/frus1981-88v44p1",
-    "frus_cover": "assets/frus_cover.png",
+    "frus_cover": "frus_cover.png",
     "ticker": [
       "New FRUS volume: National Security Policy, 1985\u20131988.",
       "Primary docs on SDI, START, INF, NSP \u2014 free online.",
@@ -117,7 +117,7 @@
     },
     {
       "name": "Caspar Weinberger",
-      "image": "assets/opponent_weinberger_sheet.png",
+      "image": "opponent_weinberger_sheet.png",
       "grid": {
         "cols": 3,
         "rows": 3
@@ -172,7 +172,7 @@
     },
     {
       "name": "Mikhail Gorbachev",
-      "image": "assets/opponent_gorbachev_sheet.png",
+      "image": "opponent_gorbachev_sheet.png",
       "grid": {
         "cols": 3,
         "rows": 4
