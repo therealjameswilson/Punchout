@@ -88,12 +88,32 @@
           5
         ]
       },
-      "ai": {
-        "tell_ms": 550,
-        "active_ms": 120,
-        "recovery_ms": 350,
-        "counter_window_ms": 180
-      }
+      "moves": [
+        {
+          "id": "straight_jab",
+          "tell_ms": 520,
+          "active_ms": 120,
+          "recovery_ms": 340,
+          "counter_ms": 180,
+          "guard": "high"
+        },
+        {
+          "id": "hook_right",
+          "tell_ms": 600,
+          "active_ms": 133,
+          "recovery_ms": 380,
+          "counter_ms": 150,
+          "guard": "high"
+        },
+        {
+          "id": "body_blow",
+          "tell_ms": 520,
+          "active_ms": 120,
+          "recovery_ms": 360,
+          "counter_ms": 140,
+          "guard": "low"
+        }
+      ]
     },
     {
       "name": "Caspar Weinberger",
@@ -123,12 +143,32 @@
           8
         ]
       },
-      "ai": {
-        "tell_ms": 500,
-        "active_ms": 120,
-        "recovery_ms": 380,
-        "counter_window_ms": 170
-      }
+      "moves": [
+        {
+          "id": "straight_jab",
+          "tell_ms": 480,
+          "active_ms": 120,
+          "recovery_ms": 330,
+          "counter_ms": 160,
+          "guard": "high"
+        },
+        {
+          "id": "hook_right",
+          "tell_ms": 560,
+          "active_ms": 133,
+          "recovery_ms": 370,
+          "counter_ms": 140,
+          "guard": "high"
+        },
+        {
+          "id": "body_blow",
+          "tell_ms": 500,
+          "active_ms": 120,
+          "recovery_ms": 350,
+          "counter_ms": 140,
+          "guard": "low"
+        }
+      ]
     },
     {
       "name": "Mikhail Gorbachev",
@@ -159,12 +199,32 @@
           9
         ]
       },
-      "ai": {
-        "tell_ms": 460,
-        "active_ms": 120,
-        "recovery_ms": 360,
-        "counter_window_ms": 160
-      }
+      "moves": [
+        {
+          "id": "straight_jab",
+          "tell_ms": 440,
+          "active_ms": 120,
+          "recovery_ms": 320,
+          "counter_ms": 150,
+          "guard": "high"
+        },
+        {
+          "id": "hook_right",
+          "tell_ms": 520,
+          "active_ms": 133,
+          "recovery_ms": 360,
+          "counter_ms": 130,
+          "guard": "high"
+        },
+        {
+          "id": "body_blow",
+          "tell_ms": 480,
+          "active_ms": 120,
+          "recovery_ms": 340,
+          "counter_ms": 130,
+          "guard": "low"
+        }
+      ]
     }
   ],
   "hud": {
@@ -180,5 +240,21 @@
     },
     "opponent_damage": 8,
     "player_damage": 10
+  },
+  "round": {
+    "length_ms": 180000,
+    "bell_ms": 1500
+  },
+  "rules": {
+    "tko_per_round": 3,
+    "ref_count_ms": 1000
+  },
+  "earn": {
+    "perfect_dodge_window_ms": 100,
+    "star_on": [
+      "straight_jab:head",
+      "hook_right:head",
+      "body_blow:body"
+    ]
   }
 }
